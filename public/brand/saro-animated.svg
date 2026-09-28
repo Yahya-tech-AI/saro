@@ -1,0 +1,445 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+
+  <defs>
+
+    <!-- ========================================================= -->
+    <!-- SARO BACKGROUND GRADIENT                                  -->
+    <!-- ========================================================= -->
+
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="0%">
+
+      <stop offset="0%" stop-color="#000000"/>
+      <stop offset="22%" stop-color="#050505"/>
+      <stop offset="38%" stop-color="#120a18"/>
+
+      <stop offset="48%" stop-color="#4d00a8"/>
+      <stop offset="54%" stop-color="#7000d9"/>
+
+      <stop offset="62%" stop-color="#18351f"/>
+      <stop offset="76%" stop-color="#087c3b"/>
+      <stop offset="100%" stop-color="#00ff66"/>
+
+    </linearGradient>
+
+
+    <!-- ========================================================= -->
+    <!-- INFINITY GRADIENT                                         -->
+    <!-- ========================================================= -->
+
+    <linearGradient
+      id="infinity"
+      x1="0%"
+      y1="0%"
+      x2="100%"
+      y2="100%"
+    >
+
+      <stop offset="0%" stop-color="#7000ff"/>
+      <stop offset="50%" stop-color="#e000ff"/>
+      <stop offset="100%" stop-color="#7000ff"/>
+
+      <!-- Moving highlight -->
+      <animate
+        attributeName="x1"
+        values="0%;100%;0%"
+        dur="4s"
+        repeatCount="indefinite"
+      />
+
+      <animate
+        attributeName="x2"
+        values="100%;0%;100%"
+        dur="4s"
+        repeatCount="indefinite"
+      />
+
+    </linearGradient>
+
+
+    <!-- ========================================================= -->
+    <!-- CENTER GLOW                                               -->
+    <!-- ========================================================= -->
+
+    <radialGradient id="centerGlow">
+
+      <stop
+        offset="0%"
+        stop-color="#d000ff"
+        stop-opacity="0.7"
+      />
+
+      <stop
+        offset="35%"
+        stop-color="#8b00ff"
+        stop-opacity="0.3"
+      />
+
+      <stop
+        offset="100%"
+        stop-color="#8b00ff"
+        stop-opacity="0"
+      />
+
+    </radialGradient>
+
+
+    <!-- ========================================================= -->
+    <!-- MAIN GLOW                                                  -->
+    <!-- ========================================================= -->
+
+    <filter
+      id="glow"
+      x="-100%"
+      y="-100%"
+      width="300%"
+      height="300%"
+    >
+
+      <feGaussianBlur stdDeviation="3.5"/>
+
+    </filter>
+
+
+    <!-- ========================================================= -->
+    <!-- INFINITY GLOW                                              -->
+    <!-- ========================================================= -->
+
+    <filter
+      id="infinityGlow"
+      x="-80%"
+      y="-80%"
+      width="260%"
+      height="260%"
+    >
+
+      <feGaussianBlur stdDeviation="2"/>
+
+    </filter>
+
+
+    <!-- ========================================================= -->
+    <!-- BEAM GLOW                                                  -->
+    <!-- ========================================================= -->
+
+    <filter
+      id="beamGlow"
+      x="-100%"
+      y="-100%"
+      width="300%"
+      height="300%"
+    >
+
+      <feGaussianBlur stdDeviation="2.5"/>
+
+    </filter>
+
+
+    <!-- ========================================================= -->
+    <!-- ROUNDED ICON                                               -->
+    <!-- ========================================================= -->
+
+    <clipPath id="rounded">
+
+      <rect
+        x="2"
+        y="2"
+        width="60"
+        height="60"
+        rx="15"
+      />
+
+    </clipPath>
+
+
+    <!-- ========================================================= -->
+    <!-- INFINITY PATH                                              -->
+    <!-- ========================================================= -->
+
+    <path
+      id="infinityPath"
+      d="
+        M13 32
+        C13 24 21 21 28 27
+        L32 32
+        L36 27
+        C43 21 51 24 51 32
+        C51 40 43 43 36 37
+        L32 32
+        L28 37
+        C21 43 13 40 13 32Z
+      "
+    />
+
+  </defs>
+
+
+  <!-- =========================================================== -->
+  <!-- ICON                                                         -->
+  <!-- =========================================================== -->
+
+  <g clip-path="url(#rounded)">
+
+
+    <!-- ========================================================= -->
+    <!-- ROTATING BACKGROUND                                        -->
+    <!-- ========================================================= -->
+
+    <g
+      style="
+        transform-origin:32px 32px;
+        animation:saroOrbit 6s linear infinite;
+      "
+    >
+
+      <rect
+        x="-32"
+        y="-32"
+        width="128"
+        height="128"
+        fill="url(#bg)"
+      />
+
+    </g>
+
+
+    <!-- ========================================================= -->
+    <!-- CENTER PURPLE ENERGY FIELD                                  -->
+    <!-- ========================================================= -->
+
+    <ellipse
+      cx="32"
+      cy="32"
+      rx="22"
+      ry="18"
+      fill="url(#centerGlow)"
+      filter="url(#glow)"
+    >
+
+      <animate
+        attributeName="rx"
+        values="20;24;20"
+        dur="2.4s"
+        repeatCount="indefinite"
+      />
+
+      <animate
+        attributeName="ry"
+        values="16;20;16"
+        dur="2.4s"
+        repeatCount="indefinite"
+      />
+
+      <animate
+        attributeName="opacity"
+        values="0.65;1;0.65"
+        dur="2.4s"
+        repeatCount="indefinite"
+      />
+
+    </ellipse>
+
+
+    <!-- ========================================================= -->
+    <!-- PURPLE ENERGY BEAM                                          -->
+    <!-- ========================================================= -->
+
+    <ellipse
+      cx="32"
+      cy="32"
+      rx="20"
+      ry="5"
+      fill="#b000ff"
+      filter="url(#beamGlow)"
+    >
+
+      <!-- Beam gets pulled into the center -->
+
+      <animate
+        attributeName="rx"
+        values="20;18;14;9;4;1;20"
+        dur="2.8s"
+        repeatCount="indefinite"
+      />
+
+      <animate
+        attributeName="ry"
+        values="5;4.5;4;3;2;1;5"
+        dur="2.8s"
+        repeatCount="indefinite"
+      />
+
+      <animate
+        attributeName="opacity"
+        values="0;0.2;0.4;0.65;1;0;0"
+        dur="2.8s"
+        repeatCount="indefinite"
+      />
+
+    </ellipse>
+
+
+    <!-- ========================================================= -->
+    <!-- LEFT ENERGY PARTICLE                                        -->
+    <!-- ========================================================= -->
+
+    <circle
+      cy="32"
+      r="1.2"
+      fill="#d000ff"
+      filter="url(#beamGlow)"
+    >
+
+      <animate
+        attributeName="cx"
+        values="8;15;22;28;32"
+        dur="1.4s"
+        repeatCount="indefinite"
+      />
+
+      <animate
+        attributeName="opacity"
+        values="0;0.4;0.7;1;0"
+        dur="1.4s"
+        repeatCount="indefinite"
+      />
+
+    </circle>
+
+
+    <!-- ========================================================= -->
+    <!-- RIGHT ENERGY PARTICLE                                       -->
+    <!-- ========================================================= -->
+
+    <circle
+      cy="32"
+      r="1.2"
+      fill="#d000ff"
+      filter="url(#beamGlow)"
+    >
+
+      <animate
+        attributeName="cx"
+        values="56;49;42;36;32"
+        dur="1.4s"
+        repeatCount="indefinite"
+      />
+
+      <animate
+        attributeName="opacity"
+        values="0;0.4;0.7;1;0"
+        dur="1.4s"
+        repeatCount="indefinite"
+      />
+
+    </circle>
+
+
+    <!-- ========================================================= -->
+    <!-- INFINITY GLOW                                               -->
+    <!-- ========================================================= -->
+
+    <use
+      href="#infinityPath"
+      fill="none"
+      stroke="#a000ff"
+      stroke-width="7"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      opacity="0.45"
+      filter="url(#infinityGlow)"
+    >
+
+      <animate
+        attributeName="opacity"
+        values="0.3;0.7;0.3"
+        dur="2.4s"
+        repeatCount="indefinite"
+      />
+
+    </use>
+
+
+    <!-- ========================================================= -->
+    <!-- MAIN INFINITY                                               -->
+    <!-- ========================================================= -->
+
+    <use
+      href="#infinityPath"
+      fill="none"
+      stroke="url(#infinity)"
+      stroke-width="4.2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+
+
+    <!-- ========================================================= -->
+    <!-- CENTER IMPACT FLASH                                         -->
+    <!-- ========================================================= -->
+
+    <circle
+      cx="32"
+      cy="32"
+      r="1"
+      fill="#ffffff"
+      opacity="0"
+    >
+
+      <animate
+        attributeName="r"
+        values="1;3;1"
+        dur="2.8s"
+        repeatCount="indefinite"
+      />
+
+      <animate
+        attributeName="opacity"
+        values="0;0.8;0"
+        dur="2.8s"
+        repeatCount="indefinite"
+      />
+
+    </circle>
+
+
+  </g>
+
+
+  <!-- =========================================================== -->
+  <!-- ROUNDED BORDER                                               -->
+  <!-- =========================================================== -->
+
+  <rect
+    x="2"
+    y="2"
+    width="60"
+    height="60"
+    rx="15"
+    fill="none"
+    stroke="#ffffff"
+    stroke-opacity="0.08"
+    stroke-width="1"
+  />
+
+
+  <!-- =========================================================== -->
+  <!-- ANIMATION CSS                                                -->
+  <!-- =========================================================== -->
+
+  <style>
+
+    @keyframes saroOrbit {
+
+      from {
+        transform:rotate(0deg);
+      }
+
+      to {
+        transform:rotate(360deg);
+      }
+
+    }
+
+  </style>
+
+</svg>
