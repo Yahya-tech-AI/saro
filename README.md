@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ∞ Saro
 
-## Getting Started
+> **The all-in-one AI workspace.**
 
-First, run the development server:
+Saro brings AI chat, coding, building, research, agents, automation, memory, and more into one unified workspace.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Saro
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Saro is designed to be more than a chatbot.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+It's a workspace where you can think, create, code, research, build, and automate — all from one place.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### ✨ Modes
 
-## Learn More
+- 🧠 **Buddy** — Your everyday AI companion
+- 💻 **Code** — Coding and development
+- 🛠️ **Builder** — Build websites, apps, and projects
+- ⚡ **Agent** — AI-powered task execution
+- 🌐 **Research** — Research and information gathering
+- 🌙 **Overnight** — Continue working on tasks while you're away
 
-To learn more about Next.js, take a look at the following resources:
+## 🏗️ System
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```text
+Frontend:    React
+Backend:     Node.js
+Database:    PostgreSQL
+API:         REST
+Deployment:  Vercel
+Repository:  GitHub
+🎯 Vision
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Saro aims to bring the tools people use to work with AI into one customizable environment.
 
-## Deploy on Vercel
+Instead of switching between different applications for chat, coding, research, building, and automation, Saro brings them together into a single workspace.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+🧠 Aro
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Saro is the workspace.
+
+Aro is the intelligence behind it.
+
+The Aro ecosystem is designed to power Saro's AI capabilities across different tasks and modes.
+
+🛠️ Development
+
+Saro is currently in active development.
+
+SARO v0.1
+Status: 🟢 ONLINE
+
+The project will continue to evolve as new AI capabilities, tools, integrations, and workspace features are added.
+
+🌐 Website
+
+Saro: https://saro-navy.vercel.app/
+WILL BE CHANGED TO SARO.BOT.CD
+
+📦 Repository
+
+This repository contains the source code for Saro and its AI workspace infrastructure.
+
+🔒 Status
+
+Saro is currently a private development project.
+
+<p align="center">
+
+∞ SARO
+
+The all-in-one AI workspace.
+
+</p> 

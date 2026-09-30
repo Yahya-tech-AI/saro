@@ -1,26 +1,64 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #050505;
+  --foreground: #ffffff;
+
+  --saro-black: #050505;
+  --saro-panel: #0b0b0f;
+  --saro-panel-2: #111116;
+
+  --saro-purple: #7000ff;
+  --saro-violet: #d000ff;
+  --saro-green: #00ff66;
+
+  --saro-muted: #a7a7a7;
+  --saro-border: rgba(255, 255, 255, 0.08);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
+  --color-saro-black: var(--saro-black);
+  --color-saro-panel: var(--saro-panel);
+  --color-saro-panel-2: var(--saro-panel-2);
+
+  --color-saro-purple: var(--saro-purple);
+  --color-saro-violet: var(--saro-violet);
+  --color-saro-green: var(--saro-green);
+
+  --color-saro-muted: var(--saro-muted);
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  background: var(--background);
 }
 
 body {
-  background: var(--background);
+  margin: 0;
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(112, 0, 255, 0.16),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 100% 100%,
+      rgba(0, 255, 102, 0.08),
+      transparent 30%
+    ),
+    var(--background);
+
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+}
+
+::selection {
+  background: var(--saro-purple);
+  color: white;
 }
