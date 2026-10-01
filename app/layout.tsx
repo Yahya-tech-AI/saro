@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Saro — by Aro",
-  description: "Your personal AI.",
+  description:
+    "Saro — the all-in-one AI workspace for chat, coding, building, research, agents, automation, and more.",
   icons: {
     icon: "/brand/saro-icon.svg",
   },
